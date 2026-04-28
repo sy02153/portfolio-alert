@@ -60,7 +60,7 @@ ALERT_THRESHOLDS = {
 ALERT_CONFIG = {
     "콘솔출력":  True,   # 터미널 출력 (항상 켜두기)
     "이메일":    False,  # 이메일 알림 (아래 설정 필요)
-    "텔레그램":  False,  # 텔레그램 봇 알림 (아래 설정 필요)
+    "텔레그램":  True,  # 텔레그램 봇 알림 (아래 설정 필요)
     "슬랙":      False,  # 슬랙 웹훅 알림 (아래 설정 필요)
 }
 
@@ -75,8 +75,8 @@ EMAIL_CONFIG = {
 
 # 텔레그램 봇 설정
 TELEGRAM_CONFIG = {
-    "bot_token": "YOUR_BOT_TOKEN",      # @BotFather 에서 발급
-    "chat_id":   "YOUR_CHAT_ID",        # @userinfobot 에서 확인
+    "bot_token": os.environ.get("TELEGRAM_TOKEN", ""),      # @BotFather 에서 발급
+    "chat_id":   os.environ.get("TELEGRAM_CHAT_ID", ""),        # @userinfobot 에서 확인
 }
 
 # 슬랙 웹훅 설정
