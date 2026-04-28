@@ -18,7 +18,7 @@ jobs:
           python-version: '3.11'
 
       - name: 라이브러리 설치
-        run: pip install yfinance requests
+        run: pip install yfinance requests schedule
 
       - name: 모니터링 실행
         env:
